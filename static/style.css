@@ -4,6 +4,7 @@
   }
 
 
+
 body{
     margin: 0;
     padding: 0;
@@ -176,12 +177,15 @@ h3{
 }
 
 .userMessages{
+    margin-right: 10px;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 0px;
     align-self: flex-end;
 }
 
 #messages{
+    overflow-y:scroll;
+    height: 70vh;
     list-style-type: none;
     display: flex;
     gap: 10px;
@@ -192,5 +196,28 @@ h3{
     padding-bottom: 10px;
 }
 
+/* width */
+#messages::-webkit-scrollbar {
+    
+    width: 20px;
 
+  }
+  
+  /* Track */
+#messages::-webkit-scrollbar-track {
+    
+    border-radius: 5px;
+    background: hsl(0, 0%, 25%);
+  }
+  
+  /* Handle */
+#messages::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #888;
+  }
+  
+  /* Handle on hover */
+#messages::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
