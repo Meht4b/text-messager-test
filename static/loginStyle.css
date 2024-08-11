@@ -1,0 +1,155 @@
+
+:root{
+    --primaryColor:#C80036;
+    --primaryColorLight:hsl(344, 100%, 50%);
+    --secondaryColor:#FF6969;
+  }
+  
+  
+  @font-face {
+      font-family: centuryGothic;
+      src: url(centurygothic.ttf);
+    }
+  
+  
+  
+  body {
+  
+      height: 100vh;
+      margin-top: 0px;
+      font-family:centuryGothic;
+      background-color: #121212;
+  
+      background-image: linear-gradient(135deg,var(--primaryColorLight) 10%,transparent 10% 40%,var(--primaryColor) 40% 50%,transparent 50% 90%,white 90% 100%);
+  
+      
+  }
+  #loginContainer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #backgroundText{
+    font-size: 25vw;
+    position: absolute;
+    z-index: -1;
+    color: #D3D3D3;
+  }
+  
+  @media (max-width: 800px) {
+    #backgroundText{
+      font-size: 0px;
+    }
+  }
+  
+  #loginContainerInner{
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(50px,7vh,1000px);
+    color: #D3D3D3;
+    padding: 50px;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    box-shadow: 0 0 20px black;
+  }
+  
+  #loginTitle{
+    font-weight: bolder;
+  }
+  
+  .loginForm{
+    margin-top: 2vh;
+    font-size: clamp(20px,2vh,100px);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    margin-bottom: 1vh;
+  }
+  
+  input{
+    transition:0.2s;
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 31%);
+    outline: none;
+    width: clamp(200px,30vw,300px);
+    font-family: centuryGothic;
+    font-size: clamp(20px,2vh,100px);
+    padding: 10px;
+    border: none;
+  
+  }
+  
+  input:focus{
+    transition: 0.2s;
+    background-color: var(--primaryColor);
+  }
+  
+  input:active{
+    transform: scale(105%);
+    background-color: var(--secondaryColor);
+  }
+  
+  .straightLine{
+    margin-top: 1vh;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(90deg,#1E1E1E,var(--primaryColor) 5% 95%,#1E1E1E);
+  }
+  
+  #passwordLabel{
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  
+  #password{
+    grid-column: 2;
+    grid-row-start: 2;
+  }
+  
+  button{
+    margin-top: 2vh;
+    font-family: centuryGothic;
+    transition: 0.2s;
+    font-size: clamp(20px,2vh,100px);
+    padding: 10px 10px 10px;
+    width: 70%;
+    align-self: center;
+    border-radius: 5px;
+    border: none;
+    background-color: #505050;
+    
+  }
+  
+  button:hover{
+    transform: scale(110%);
+    transition: 0.2s;
+    background-image: linear-gradient(135deg,var(--primaryColor) 45%, hsl(12, 71%, 90%) 45% 55%, var(--primaryColor) 55%);
+    animation: gradientShine 1s ease-in-out ;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    box-shadow: 0 0 5px;
+  }
+  
+  
+  button:active{
+    transform: scale(115%);
+    opacity: 0.5;
+    background-color: var(--primaryColorLight);
+  }
+  
+  @keyframes gradientShine{
+  
+      from{
+        background-position-x: -10px;
+      }
+  
+      to{
+        background-position-x: 500px;
+      }
+  
+  }
+      

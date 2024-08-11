@@ -4,7 +4,11 @@
   }
 
 
-
+:root{
+    --primaryColor:#C80036;
+    --primaryColorLight:hsl(344, 100%, 50%);
+    --secondaryColor:#FF6969;
+  }
 body{
     margin: 0;
     padding: 0;
@@ -46,9 +50,7 @@ body{
     height: 100%;
 }
 
-#channelContainer h1{
-    color: hsl(0,0%,50%);
-}
+
 
 #messagesContainer{
     border-radius: 7px;
@@ -77,16 +79,22 @@ body{
 }
 
 .channelInfoButtons{
+
     margin-left: 10px;
     padding: 10px;
     text-align: center;
     border-radius: 7px;
-    background-color: hsl(0,0%,25%);
+    background-color: var(--primaryColor);
 }
 
 .channelInfoButtons:hover{
     transition: 0.2s;
-    background-color: hsl(0,0%,35%);
+    background-color: var(--primaryColorLight);
+}
+
+.channelInfoButtons:active{
+    transition: 0.1s;
+    background-color: hsl(344, 100%, 70%);
 }
 
 .right{
@@ -128,7 +136,7 @@ body{
 }
 
 #messageBoxButton{
-    color: white;
+    color: var(--primaryColor);
     font-size: 27px;
     font-family: centuryGothic;
     transition: 0.2s;
@@ -176,7 +184,8 @@ h3{
 }
 
 .textBox p{
-    color: hsl(0,0%,50%);
+
+    color: var(--secondaryColor);
 }
 
 .userMessages{
